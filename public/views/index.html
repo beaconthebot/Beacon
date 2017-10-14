@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="copyright" content="Copyright © 2016 I.B.M. All rights reserved.
+
+         Licensed under the Apache License, Version 2.0 (the “License”);
+         you may not use this file except in compliance with the License.
+         You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+         Unless required by applicable law or agreed to in writing, software
+         distributed under the License is distributed on an “AS IS” BASIS,
+         WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+         See the License for the specific language governing permissions and
+         limitations under the License.">
+    <meta name="description" content="Beacon - The Bot">
+    <title>Beacon - The Bot</title>
+    <link rel="stylesheet" href="css/main.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="ct" content="vPWQz9kc-2sDXDdB6m_K5RLm_mwStA0c3cyo">
+    
+	<link rel="stylesheet" href="truven.css">
+	
+	<link rel="shortcut icon" href="images/bee_128.png"/>
+	<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <link href="https://afeld.github.io/emoji-css/emoji.css"  rel="stylesheet">
+  	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<style>
+body, html {
+    height: 100%;
+}
+.bar {
+  fill: #25467a;
+}
+.parallax {
+    /* The image used */
+    background-color: white;
+
+    /* Full height */
+    min-height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#myDIV {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top:20px;
+	
+	
+	
+}
+
+.mybutton
+{color:#ffffff;
+background-color:#122b40;
+border-radius:10rem;
+padding:5px
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+	<nav class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" style="display:none" id="mySidebar">
+		<header class="w3-container">
+			<h1  style="color:#ffffff;margin-top: 5px;margin-bottom: 5px; "><b style="
+					font-weight: 200;
+					font-size: 25px;
+					margin-left:17%
+					"
+						>Beacon - The Bot</b></h1>
+
+
+		</header>
+
+
+
+		<div id="container" style="
+			/* padding-right: 10%; */
+			padding-top: 1%;
+			margin-left: 76%;
+			margin-bottom:0px
+			">
+			<img src="/images/close_24.png" style="
+				height: 35px;
+				width: 35px;
+				cursor: pointer;
+				" onclick="close_side()">
+			</div>
+
+
+			<Br>
+				<div id="input-wrapper">
+					<div id="chat-scroll-wrapper"><div id="chat-flow"></div></div>
+					<div class="row">
+						<div class="col-sm-4" style="
+							width: 15%;
+							">
+
+							<div id="output-audio" class="audio-off" onclick="TTSModule.toggle()" value="OFF"> </div>
+
+						</div>
+						<div class="col-sm-4">
+
+							<div id="input-mic" class="inactive-mic" onclick="STTModule.micON()">
+
+
+							</div>
+
+
+
+
+						</div>
+					</div>
+
+					<input id="user-input"  type="text" placeholder="What is Breast Cancer?">
+
+						<b><p  style="
+								font-size: 12px;"><i>Tip: Type "Help" if you are struck at any point in the application.</i></b></p>
+						<form action="https://giveyourfeedbacktous.eu-gb.mybluemix.net/" target="_blank">
+							<input type="submit" class="w3-button" value="Feedback" style="
+								background-color: #f28e2c;
+								color: white;
+								">
+
+							</form>
+
+
+
+						</div>
+					</nav>
+
+					<header class="w3-container">
+						<img src="images/watsonhealth-inline-neg.png" align="right" height="25" width="300" vspace="20" hspace="20"/>
+						<h1  style="color:#ffffff;margin-top: 5px;margin-bottom: 5px; "><b style="
+								font-weight: 500;
+								font-size: 30px;
+								"
+									>Beacon - The Bot</b></h1> <u style="color:#ffffff; margin-top: 5px;">Powered by Alpha Squad - I</u>
+
+
+					</header>
+
+
+
+					<div class="w3-row-padding  w3-container ">
+						<div class="w3-content">
+
+
+
+
+							<div class="w3-row">
+								<div class="w3-padding-16">
+
+									<h4 style="
+										margin-top:0px;">Beacon - The Bot uses Watson Conversation service to provide the insights on Breast Cancer,its symptoms and various treatment options.</h4>
+
+
+								</div>
+								<div class="w3-row  w3-container w3-padding-small">
+
+									<div class="col-md-3 w3-card-2   w3-padding-small" >
+										<img src="images/br2.jpg" class="" title="project one" style="max-width:100%">
+
+											<h1 style="    margin-bottom: 0px;
+												padding-bottom: 0px; color:#9b7560" >1.6 Million*</h1>
+											<h3 style="margin-top:0px;
+												padding-bottom: 0px; color:#25467a">New cases/year</h3>
+											<p>approximate number of women who develop breast cancer every year</p>
+										</div>
+
+
+
+
+										<div class="col-md-3  w3-card-2 w3-padding-small" >
+											<img src="images/br4.jpg"  class="" title="project one" style="max-width:100%">
+
+												<h1 style="    margin-bottom: 0px;
+													padding-bottom: 0px; color:#9b7560" ><15%</h1>
+														<h3 style="margin-top:0px;
+															padding-bottom: 0px; color:#25467a">Risk Factor</h3>
+														<p>of women who get breast cancer have a family member diagnosed </p>
+													</div>
+
+													<div class="col-md-3 w3-card-2   w3-padding-small">
+														<img src="images/br3.jpg" style="max-width:100%" "class="" title="project one">
+
+															<h1 style="    margin-bottom: 0px;
+																padding-bottom: 0px; color:#9b7560" >98%</h1>
+															<h3 style="margin-top:0px;
+																padding-bottom: 0px; color:#25467a">Survival Rate</h3>
+															<p>of women will survive breast cancer if found in the early stages</p>
+														</div>
+														<div class="col-md-3 w3-center w3-card-2   w3-padding-small" >
+															<img src="images/chat.png"  onclick="open_side()" class="" title="Interact with me?" style="max-width:100%;cursor:pointer">
+
+																<h1 onclick="open_side()" style="    cursor:pointer;margin-bottom: 0px;
+																	padding-bottom: 0px; color:#25467a" >Click here!!</h1>
+																<h3 style="margin-top:3px;
+																	padding-bottom: 0px; color:white">Click   </h3>
+																<p style="color:white">of women will survive breast cancer if found in the early stages</p>	
+
+															</div>
+
+
+
+
+
+
+
+
+
+														</div>	
+
+
+													</div>
+													<div class="w3-twothird w3-padding-small">
+														<h2 style="font-size:25px"> Data Insights - Breast Cancer<p style="
+																font-size: 12px;"
+																	> <i>(Powered by Watson Discovery News)</i></p></h2>
+
+														<div class=" w3-bar">
+															<button class="w3-bar-item w3-button testbtn" onclick="openitup(event,'area6')" style="
+																margin: 0px;  width: 20%;">Drug</button>
+															<button class="w3-bar-item w3-button testbtn" onclick="openitup(event,'area7')" style="
+																margin: 0px;  width: 20%;">Facility</button>
+															<button class="w3-bar-item w3-button testbtn" onclick="openitup(event,'area3')" style="
+																margin: 0px;  width: 20%;">Person</button>
+															<button class="w3-bar-item w3-button testbtn" onclick="openitup(event,'area4')" style="
+																margin: 0px;  width: 20%;">Organization</button>
+															<button class="w3-bar-item w3-button testbtn" onclick="openitup(event,'area5')" style="
+																margin: 0px;  width: 20%;">Location</button>
+
+
+
+														</div>
+
+														<div class="w3-row-padding w3-container w3-card-4">
+															<div  class="city w3-animate-opacity" id="area3">
+																<h3> Top 15 Persons </h3>
+																<p>Below are the Top persons who are mentioned on the news articles about Breast Cancer.</p>
+																<br/>
+
+															</div>
+
+															<div  class="city w3-animate-opacity" id="area4">
+																<h3> Top 15 Organizations</h3>
+																<p>Below are the Top Organizations which are mentioned on the news articles about Breast Cancer.</p>
+																<br/>
+															</div>
+
+
+															<div  class="city w3-animate-opacity" id="area5">
+																<h3>Top 15 Locations</h3>
+																<p>Below are the Top Locations which are mentioned on the news articles about Breast Cancer.</p>
+																<br>
+																</div>
+
+																<div  class="city w3-animate-opacity" id="area6">
+																	<h3>Top 15 Drugs</h3>
+																	<p>Below are the Top Drugs which are mentioned on the news articles about Breast Cancer.</p>
+																	<br>
+																	</div>
+
+																	<div  class="city w3-animate-opacity" id="area7">
+																		<h3>Top 15 Facilities</h3>
+																		<p>Below are the Top Facilities which are mentioned on the news articles about Breast Cancer.</p>
+																		<br>
+																		</div>
+
+																	</div>
+
+																</div>
+																<div class="w3-third w3-padding-small">
+
+																	<h2 style="font-size:25px"> Top Articles - Breast Cancer<p style="
+																			font-size: 12px;"
+																				> <i>(Powered by Watson Discovery News)</i></p></h2>
+
+
+																	<div class="w3-padding-small w3-container w3-card-4" style="
+																		height: 450px;
+																		overflow: scroll;
+																		">
+
+
+																		<button onclick="myAccordionFunc('Demo1')" class="w3-padding-16 w3-button w3-block w3-left-align" ><b>> New potential breast cancer drug identified</b></button>
+																		<div id="Demo1" class="w3-hide">
+																			<div class="w3-container">
+																				<p class="w3-padding-small">The first-in-class molecule shuts down oestrogen- sensitive breast cancer in a new way, researchers said.<a align="right" target="_blank"  href="http://www.onenewspage.com/n/Health/75edq33mo/New-potential-breast-cancer-drug-identified.htm">>>Know more</a></p>
+
+																			</div>
+																		</div>
+
+																		<button onclick="myAccordionFunc('Demo2')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align"><b>> Breast Cancer Diagnoses Brings 2 Women Together</b></button>
+																		<div id="Demo2" class="w3-hide">
+																			<div class="w3-container">
+																				<p class="w3-padding-small">Breast Cancer Diagnoses Brings 2 Tulsa Women Together Breast Cancer Diagnoses Brings 2 Tulsa Women Together<a align="right" target="_blank" href="http://www.newson6.com/clip/13643184/breast-cancer-diagnoses-brings-2-tulsa-women-together">>>Know more</a></p>
+
+																			</div>
+																		</div>
+																		<button onclick="myAccordionFunc('Demo6')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align"><b>> Warning Signs of Breast Cancer Recurrence</b></button>
+																		<div id="Demo6" class="w3-hide">
+																			<div class="w3-container">
+																				<p class="w3-padding-small">To recognize a recurrence of breast cancer, it is important to understand your personal risk that cancer may return, as well as keeping an eye out for additional warning signs.<a align="right" target="_blank" href="http://www.coolhealthtips.com/warning-signs-of-breast-cancer-recurrence.html">>>Know more</a></p>
+
+																			</div>
+																		</div>
+																		<button onclick="myAccordionFunc('Demo3')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align" ><b>> Susan G. Komen BR - Big Wigs Reveal Party</b></button>
+																		<div id="Demo3" class="w3-hide">
+																			<div class="w3-container">
+																				<p class="w3-padding-small">The 2017 Big Wigs - Under the Big Top reveal party at L'auberge Casino and Hotel was a hit Thursday night. Local 33's Chad Sabadie co-hosted the 2nd annual event with Matt Moscona, introducing this year's group of Big Wigs, who are raising money for Komen Baton Rouge and the fight against Breast Cancer<a align="right" target="_blank" href="http://www.brproud.com/home/susan-g-komen-br-big-wigs-reveal-party/http&#x3a;&#x2f;&#x2f;www&#x2e;brproud&#x2e;com&#x2f;home&#x2f;susan-g-komen-br-big-wigs-reveal-party&#x2f;770962095">>>Know more</a></p>
+
+																			</div>
+																		</div>
+
+																		<button onclick="myAccordionFunc('Demo4')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align" ><b>> Women Rally For Monserrate</b></button>
+																		<div id="Demo4" class="w3-hide">
+																			<div class="w3-container">
+																				<p class="w3-padding-small">Print Women Rally For Monserrate Over 100 East Elmhurst and Corona women went to an event held at the Silver Spoon Diner near LeFrak City to show their support for Hiram Monserrate’s campaign for the 21st City Council District seat.<a align="right" target="_blank" href="http://www.qgazette.com/news/2017-08-23/Front_Page/Women_Rally_For_Monserrate.html">>>Know more</a></p>
+
+																			</div>
+																		</div>
+
+																		<button onclick="myAccordionFunc('Demo7')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align" ><b>> Taselisib boosts breast tumor shrinkage</b></button>
+																		<div id="Demo7" class="w3-hide">
+																			<div class="w3-container">
+																				<p class="w3-padding-small">Other LORELEI: Taselisib boosts breast tumor shrinkage Adding taselisib to letrozole before surgery significantly improved outcomes for patients with early breast cancer that was both estrogen receptor positive and HER2-negative (ER+/HER2-).<a align="right" target="_blank" href="http://hmnews.org/cancer-news/cluster958916200/">>>Know more</a></p>
+
+																			</div>
+																		</div>
+
+																		<button onclick="myAccordionFunc('Demo8')" class="w3-padding-16 w3-theme w3-button w3-left-align" ><b>> Delaware Cancer Coalition offering Mentor Support</b></button>
+																		<div id="Demo8" class="w3-hide">
+																			<div class="w3-container">
+																				<p class="w3-padding-small">The Delaware Breast Cancer Coalition’s Peer Mentor Support Program is offering free, ongoing, one-on-one emotional support and resources to those newly diagnosed with breast cancer by trained breast cancer survivors.<a align="right" target="_blank" href="http://www.doverpost.com/news/20170808/delaware-breast-cancer-coalition-offering-peer-mentor-support-program">>>Know more</a></p>
+
+																			</div>
+																		</div>
+
+
+																	</div>
+																</div>
+
+															</div>
+
+
+														</div>
+
+
+
+
+
+													</div>
+
+
+
+												</div>
+
+											</div>
+
+										</div>
+										<br>
+											<p style="
+												font-size: 10px;"><i><b>.   *</b> <a href="https://www.cancer.org/research/cancer-facts-statistics/all-cancer-facts-figures/cancer-facts-figures-2017.html" target="_blank">Cancer Facts & Figures 2017</i>		</a>
+
+
+												<div class="w3-container w3-black w3-center w3-opacity">
+
+													<div class="col-sm-12">
+														<span class="footer-copy">© 2017 IBM Watson Health</span>
+													</div></div>
+											</div>            
+
+
+
+
+
+
+											<div id="dark-overlay"></div>
+											<div id="clear-overlay" ></div>
+											<!--The main car dashboard SVG-->
+
+
+
+											<div id="tooltip-dialog-list"></div>
+
+
+											<script>
+
+												function open_side() {
+												var x = document.getElementById("mySidebar");
+												x.style.width = "100%";
+
+
+												x.style.display = "block";
+												}
+												function close_side() {
+												document.getElementById("mySidebar").style.display = "none";
+												}
+
+												function myAccordionFunc(id) {
+												var x = document.getElementById(id);
+												if (x.className.indexOf("w3-show") == -1) {
+												x.className += " w3-show";
+												} else { 
+												x.className = x.className.replace(" w3-show", "");
+												}
+												}
+
+
+
+												function openitup(evt, cityName) {
+												var i;
+												var x = document.getElementsByClassName("city");
+												for (i = 0; i < x.length; i++) {
+														x[i].style.display = "none";
+														}
+														var activebtn = document.getElementsByClassName("testbtn");
+														for (i = 0; i < x.length; i++) {
+																activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+																}
+																document.getElementById(cityName).style.display = "block";
+																evt.currentTarget.className += " w3-dark-grey";
+																}
+
+																var mybtn = document.getElementsByClassName("testbtn")[0];
+																mybtn.click();
+
+
+
+															</script>
+															<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+															<script src="js/script.js"></script>
+
+
+															<script src="js/d3.min.js"></script>
+
+															<script src="vendor.min.js"></script>
+															<script src="dashboard.min.js"></script>
+
+															<script src="ibm/watson-speech.min.js"></script>
+															<script src="ibm/speech-to-text.js"></script>
+															<script src="ibm/text-to-speech.js"></script>
+															<script src="js/d3.layout.cloud.js"></script>
+
+														</body>
+
+</html>

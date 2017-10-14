@@ -1,0 +1,20 @@
+---
+declared-services:
+  Conversation-i8:
+    label: conversation
+    plan: free
+  Text to Speech-ji:
+    label: text_to_speech
+    plan: standard
+  Speech to Text-vc:
+    label: speech_to_text
+    plan: standard	
+applications:
+- name: alpha-squad
+  command: npm start
+  path: .
+  memory: 512M
+  services:
+  - Conversation-i8
+  - Text to Speech-ji
+  - Speech to Text-vc
