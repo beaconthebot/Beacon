@@ -24,6 +24,7 @@ require('./config/express')(app);
 require('./routes/conversation')(app);
 require('./routes/speech-to-text')(app);
 require('./routes/text-to-speech')(app);
+require('./routes/discovery')(app);
 app.use(express.static(__dirname + './routes'));
 app.use(express.static(__dirname + '/css'));
 app.use (express.static(__dirname + '/public'));

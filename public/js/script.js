@@ -2,7 +2,7 @@ var fill = d3.scale.category20b();
 
 
 
-d3.csv("data/entities_person.csv", function(data) {
+d3.tsv("data/Top10entitiesperson.tsv", function(data) {
   data.forEach(function(d) {
     d.size = +d.size;
   });
@@ -14,7 +14,7 @@ d3.csv("data/entities_person.csv", function(data) {
       .rotate(function() { return ~~(Math.random()); })
       .font("Verdana")
 	   
-      .fontSize(function(d) { return Math.max(13, Math.min(d.size, 500)); })
+      .fontSize(function(d) { return Math.max(13, Math.min(d.size/15, 40)); })
        
 	  .on("end", draw)
 	  .start();
@@ -31,7 +31,7 @@ d3.csv("data/entities_person.csv", function(data) {
       .selectAll("text")
         .data(data)
       .enter().append("text")
-        .style("font-size", function(d) { return d.size + "px"; })
+        .style("font-size", function(d) { return d.size + "pt"; })
         .style("font-family", "Verdana")
         .style("cursor", "pointer")
         .attr("text-anchor", "middle")
@@ -46,7 +46,7 @@ d3.csv("data/entities_person.csv", function(data) {
     
 });
 
-d3.csv("data/entities_organisation.csv", function(data) {
+d3.tsv("data/Top10entitiescompany.tsv", function(data) {
   data.forEach(function(d) {
     d.size = +d.size;
   });
@@ -58,7 +58,7 @@ d3.csv("data/entities_organisation.csv", function(data) {
       .rotate(function() { return ~~(Math.random()); })
       .font("Verdana")
 	   
-      .fontSize(function(d) { return Math.max(13, Math.min(d.size, 40)); })
+      .fontSize(function(d) { return Math.max(13, Math.min(d.size/50, 40)); })
        
 	  .on("end", draw)
 	  .start();
@@ -91,7 +91,7 @@ d3.csv("data/entities_organisation.csv", function(data) {
 });
 
 
-d3.csv("data/entities_Location.csv", function(data) {
+d3.tsv("data/Top10entitiesLocation.tsv", function(data) {
   data.forEach(function(d) {
     d.size = +d.size;
   });
@@ -103,7 +103,7 @@ d3.csv("data/entities_Location.csv", function(data) {
       .rotate(function() { return ~~(Math.random()); })
       .font("Verdana")
 	   
-      .fontSize(function(d) { return Math.max(13, Math.min(d.size, 40)); })
+      .fontSize(function(d) { return Math.max(13, Math.min(d.size/90, 40)); })
        
 	  .on("end", draw)
 	  .start();
@@ -138,7 +138,7 @@ d3.csv("data/entities_Location.csv", function(data) {
 
 
 
-d3.csv("data/entities_Drug.csv", function(data) {
+d3.tsv("data/Top10entitiesDrug.tsv", function(data) {
   data.forEach(function(d) {
     d.size = +d.size;
   });
@@ -150,7 +150,7 @@ d3.csv("data/entities_Drug.csv", function(data) {
       .rotate(function() { return ~~(Math.random()); })
       .font("Verdana")
 	   
-      .fontSize(function(d) { return Math.max(13, Math.min(d.size, 40)); })
+      .fontSize(function(d) { return Math.max(13, Math.min(d.size/10, 40)); })
        
 	  .on("end", draw)
 	  .start();
@@ -182,7 +182,7 @@ d3.csv("data/entities_Drug.csv", function(data) {
     
 });
 
-d3.csv("data/entities_facility.csv", function(data) {
+d3.tsv("data/Top10entitiesfacility.tsv", function(data) {
   data.forEach(function(d) {
     d.size = +d.size;
   });
@@ -194,7 +194,7 @@ d3.csv("data/entities_facility.csv", function(data) {
       .rotate(function() { return ~~(Math.random()); })
       .font("Verdana")
 	   
-      .fontSize(function(d) { return Math.max(13, Math.min(d.size, 40)); })
+      .fontSize(function(d) { return Math.max(13, Math.min(d.size/10, 40)); })
        
 	  .on("end", draw)
 	  .start();
