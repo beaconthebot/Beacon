@@ -15,6 +15,7 @@
  */
 
 const watson = require('watson-developer-cloud'); // watson sdk
+const DiscoveryV1 = require('watson-developer-cloud/discovery/v1');
 
 // Create the service wrapper
 const conversation = watson.conversation({
@@ -26,7 +27,18 @@ const conversation = watson.conversation({
   version: 'v1'
 });
 
+const discovery = new DiscoveryV1({
+  // if left unspecified here, the SDK will fall back to the DISCOVERY_USERNAME and DISCOVERY_PASSWORD
+  // environment properties, and then Bluemix's VCAP_SERVICES environment property
+  // username: 'INSERT YOUR USERNAME FOR THE SERVICE HERE',
+  // password: 'INSERT YOUR PASSWORD FOR THE SERVICE HERE'
+  username: 'e6cddeed-f7fb-4f1a-897b-9d5613cea367',
+  password: 'tkCNMMQa8Ine',
+  version_date: '2017-08-01'
+});
 
+discovery.environmentId = 'system';
+discovery.collectionId = 'news';
 
 /**
  * Updates the response text using the intent confidence
@@ -91,4 +103,7 @@ module.exports = function(app) {
       return res.json(updateMessage(payload, data));
     });
   });
+  
+  
+  
 };
